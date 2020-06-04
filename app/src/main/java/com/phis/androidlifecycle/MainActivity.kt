@@ -22,13 +22,29 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //화면이 활성화 될때 항상 호출된다.
     override fun onResume() {
+        //자동새로고침과 같은 기능을 구현 할때 사용된다.
         super.onResume()
+
+
 
         Log.d("메인화면", "onResume가 실행됨")
 
 
 
     }
+
+
+    //활성화된 액티비티가 다른화면에 가려지거나, 홈버튼눌러서 액티비티가 비활성화될때 항상 호출된다.
+    override fun onPause() {
+        //일시정지 기능으로 주로 활용된다.
+        super.onPause()
+
+
+        Log.d("메인화면", "onPause가 실행됨")
+
+    }
+
 
 }
